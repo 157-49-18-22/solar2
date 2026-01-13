@@ -86,7 +86,7 @@
 }
 
 .social-link:hover {
-    background: var(--primary-green);
+    background: #fde047;
     border-color: var(--primary-green);
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
