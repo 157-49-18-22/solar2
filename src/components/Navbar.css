@@ -1,0 +1,73 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    /* White initially for dark hero */
+    transition: color 0.3s;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links li {
+    list-style: none;
+    /* Ensure no bullets */
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: #fff;
+    /* White initially */
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Scrolled State Colors */
+.navbar.scrolled .logo {
+    color: var(--secondary);
+}
+
+.navbar.scrolled .nav-links a {
+    color: var(--secondary);
+}
+
+.navbar.scrolled .nav-links a:hover {
+    color: var(--primary-hover);
+}

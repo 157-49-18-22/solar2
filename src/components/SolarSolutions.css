@@ -1,0 +1,121 @@
+.solutions-section {
+    background-color: #020617;
+    /* Deep dark blue matching the reference */
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.section-title .highlight {
+    color: var(--primary);
+    /* Solar Yellow */
+}
+
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.solutions-swiper {
+    padding-bottom: 3rem !important;
+    width: 100%;
+}
+
+.solution-slide {
+    width: 300px;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Adjust slide width for larger screens */
+@media (min-width: 768px) {
+    .solution-slide {
+        width: 350px;
+        height: 500px;
+    }
+}
+
+.solution-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #1e293b;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.solution-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    color: #fff;
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+}
+
+.solution-card:hover .card-content {
+    transform: translateY(0);
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Swiper Controls Customization */
+.swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5) !important;
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary) !important;
+    width: 25px !important;
+    border-radius: 5px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary) !important;
+}
