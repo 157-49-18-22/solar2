@@ -9,24 +9,44 @@ import './SolarSolutions.css';
 
 const solutions = [
     {
-        title: "Homes",
+        title: "Residential Homes",
         image: "https://images.pexels.com/photos/159397/solar-panel-array-power-sun-electricity-159397.jpeg?auto=compress&cs=tinysrgb&w=800",
-        desc: "Reduce electricity bills by up to 90% for your home."
+        desc: "Save big on your home electricity bills."
     },
     {
-        title: "Housing Society",
+        title: "Housing Societies",
         image: "https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=800",
-        desc: "Power common areas and amenities with clean energy."
+        desc: "Power common areas with clean energy."
     },
     {
-        title: "Commercial",
+        title: "Commercial Offices",
         image: "https://images.pexels.com/photos/9875415/pexels-photo-9875415.jpeg?auto=compress&cs=tinysrgb&w=800",
-        desc: "Sustainable power solutions for businesses and offices."
+        desc: "Sustainable workspaces for modern businesses."
     },
     {
-        title: "Industrial",
+        title: "Factories & Industry",
         image: "https://images.pexels.com/photos/9875417/pexels-photo-9875417.jpeg?auto=compress&cs=tinysrgb&w=800",
-        desc: "Large scale solar installations for factories."
+        desc: "Heavy-duty power for industrial needs."
+    },
+    {
+        title: "Agriculture",
+        image: "https://images.pexels.com/photos/2560898/pexels-photo-2560898.jpeg?auto=compress&cs=tinysrgb&w=800",
+        desc: "Solar pumps and farming solutions."
+    },
+    {
+        title: "EV Charging",
+        image: "https://images.pexels.com/photos/9800009/pexels-photo-9800009.jpeg?auto=compress&cs=tinysrgb&w=800",
+        desc: "Fuel your ride with the power of the sun."
+    },
+    {
+        title: "Solar Carports",
+        image: "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg?auto=compress&cs=tinysrgb&w=800",
+        desc: "Shade your car while generating power."
+    },
+    {
+        title: "Schools & Hospitals",
+        image: "https://images.pexels.com/photos/2056926/pexels-photo-2056926.jpeg?auto=compress&cs=tinysrgb&w=800",
+        desc: "Reliable power for essential services."
     }
 ];
 
@@ -42,17 +62,18 @@ const SolarSolutions = () => {
                         grabCursor={true}
                         centeredSlides={true}
                         slidesPerView={'auto'}
+                        spaceBetween={40}
+                        loop={true}
                         coverflowEffect={{
                             rotate: 0,
                             stretch: 0,
-                            depth: 100,
-                            modifier: 2.5,
-                            slideShadows: true,
+                            depth: 50,
+                            modifier: 1,
+                            slideShadows: false,
                         }}
                         pagination={{ clickable: true }}
                         navigation={true}
                         autoplay={{ delay: 3000, disableOnInteraction: false }}
-                        loop={true}
                         className="solutions-swiper"
                     >
                         {solutions.map((item, index) => (

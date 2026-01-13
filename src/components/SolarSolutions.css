@@ -26,23 +26,35 @@
 }
 
 .solutions-swiper {
-    padding-bottom: 3rem !important;
+    padding-bottom: 4rem !important;
     width: 100%;
+    padding-top: 2rem;
 }
 
 .solution-slide {
-    width: 300px;
-    height: 450px;
+    width: 280px;
+    height: 480px;
     border-radius: 20px;
+    /* Remove overflow:hidden here to allow shadows if we wanted them, 
+     but keeping it for border-radius clip */
     overflow: hidden;
     transition: all 0.3s ease;
+    opacity: 0.4;
+    /* Fade out non-active slides */
+    transform: scale(0.9);
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 /* Adjust slide width for larger screens */
 @media (min-width: 768px) {
     .solution-slide {
-        width: 350px;
-        height: 500px;
+        width: 380px;
+        height: 550px;
     }
 }
 
@@ -50,10 +62,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    border-radius: 20px;
-    overflow: hidden;
     background: #1e293b;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .card-image {
@@ -65,11 +74,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.7s ease;
 }
 
-.solution-card:hover .card-image img {
-    transform: scale(1.1);
+/* Subtle zoom on active */
+.swiper-slide-active .card-image img {
+    transform: scale(1.05);
 }
 
 .card-content {
@@ -77,11 +87,15 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 1.5rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 3rem 1.5rem 2rem;
+    background: linear-gradient(to top, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.8) 50%, transparent 100%);
     color: #fff;
-    transform: translateY(10px);
-    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    /* Center align text */
+    text-align: center;
 }
 
 .solution-card:hover .card-content {
@@ -89,17 +103,18 @@
 }
 
 .card-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
-    font-weight: 600;
-    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .card-content p {
-    font-size: 0.9rem;
-    opacity: 0.9;
-    text-align: center;
+    font-size: 1rem;
+    color: #cbd5e1;
     line-height: 1.5;
+    max-width: 90%;
 }
 
 /* Swiper Controls Customization */

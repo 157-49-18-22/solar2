@@ -1,54 +1,93 @@
-import React from 'react';
+import Lottie from 'lottie-react';
+import solarAnimation from '../assets/solar.json';
 import './Footer.css';
 
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="container footer-grid">
-                <div className="footer-brand">
-                    <div className="footer-logo">
-                        <img src="/logo-main.svg" alt="SolarSquare" style={{ height: '40px', filter: 'brightness(0) invert(1)' }} />
-                        <span>SolarSquare</span>
-                    </div>
-                    <p>
-                        India's reliable solar advisor. We are committed to accelerating
-                        the adoption of solar energy across the nation.
-                    </p>
-                </div>
-
-                <div className="footer-links">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div className="footer-links">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Solar Calculator</a></li>
-                        <li><a href="#">Customer Stories</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-
-                <div className="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p>Email: hello@solarsquare.in</p>
-                    <p>Phone: +91 98765 43210</p>
-                    <div className="social-icons">
-                        {/* Add social icons later if needed */}
-                    </div>
-                </div>
+            {/* Background Solar Animation */}
+            <div className="footer-solar-bg">
+                <Lottie animationData={solarAnimation} loop={true} className="solar-lottie" />
             </div>
 
-            <div className="footer-bottom">
-                <div className="container">
-                    <p>&copy; 2024 SolarSquare Energy Pvt Ltd. All rights reserved.</p>
+            <div className="container footer-content-wrapper">
+                <div className="footer-grid">
+                    {/* Company Info */}
+                    <div className="footer-col">
+                        <img
+                            src="/logo/Png/Grid Zero-01.png"
+                            alt="Grid Zero Logo"
+                            className="footer-logo"
+                        />
+                        <p className="footer-description">
+                            Leading India's solar revolution with innovative, sustainable energy solutions.
+                            Empowering homes and businesses to go green.
+                        </p>
+                        <div className="social-links">
+                            <a href="#" className="social-link" aria-label="Facebook">
+                                <i className="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" className="social-link" aria-label="Twitter">
+                                <i className="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" className="social-link" aria-label="Instagram">
+                                <i className="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" className="social-link" aria-label="LinkedIn">
+                                <i className="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Quick Links */}
+                    <div className="footer-col">
+                        <h3 className="footer-title">Quick Links</h3>
+                        <ul className="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    {/* Services */}
+                    <div className="footer-col">
+                        <h3 className="footer-title">Our Services</h3>
+                        <ul className="footer-links">
+                            <li><a href="#services">Residential Solar</a></li>
+                            <li><a href="#services">Commercial Solar</a></li>
+                            <li><a href="#services">Housing Society</a></li>
+                            <li><a href="#services">Maintenance</a></li>
+                        </ul>
+                    </div>
+
+                    {/* Contact Info */}
+                    <div className="footer-col">
+                        <h3 className="footer-title">Contact Us</h3>
+                        <div className="footer-contact">
+                            <p>
+                                <i className="fas fa-map-marker-alt"></i>
+                                123 Solar Street, Green City, India
+                            </p>
+                            <p>
+                                <i className="fas fa-phone"></i>
+                                +91 98765 43210
+                            </p>
+                            <p>
+                                <i className="fas fa-envelope"></i>
+                                info@gridzero.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Footer Bottom */}
+                <div className="footer-bottom">
+                    <p>&copy; 2026 Grid Zero. All rights reserved.</p>
+                    <div className="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
                 </div>
             </div>
         </footer>

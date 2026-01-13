@@ -30,7 +30,7 @@ const Features = () => {
         <section id="benefits" className="features-section">
             <div className="container">
                 <div className="section-header">
-                    <h2>Why Choose <span className="text-gradient">SolarSquare?</span></h2>
+                    <h2>Why Choose <span className="text-gradient">Grid Zero?</span></h2>
                     <p>We make switching to solar simple, affordable, and reliable.</p>
                 </div>
 

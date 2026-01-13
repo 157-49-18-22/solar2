@@ -5,8 +5,15 @@ const Hero = () => {
     return (
         <section className="hero">
             <div className="video-background">
-                <video autoPlay loop muted playsInline className="back-video">
-                    <source src="https://videos.pexels.com/video-files/4255153/4255153-hd_1920_1080_30fps.mp4" type="video/mp4" />
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="back-video"
+                    poster="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=1920"
+                >
+                    <source src="/video/solar-bg.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <div className="overlay"></div>
@@ -28,7 +35,7 @@ const Hero = () => {
                     <div className="trust-badge">
                         <div className="google-icon">G</div>
                         <div className="trust-text">
-                            <strong>SolarSquare is India's trusted solar company</strong>
+                            <strong>Grid Zero is India's trusted solar company</strong>
                             <span>Rated 4.8 on Google with 6000+ customer reviews</span>
                         </div>
                     </div>
