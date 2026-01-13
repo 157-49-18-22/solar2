@@ -15,10 +15,12 @@ function App() {
       <Navbar />
       <Hero />
       <SolarSolutions />
+
       <Features />
+      <Testimonials />
       <Difference />
       <Process />
-      <Testimonials />
+
       <FAQ />
       <Footer />
     </div>

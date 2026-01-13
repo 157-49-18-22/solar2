@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="container nav-content">
         <a href="#" className="logo">
           <img src="/logo-main.svg" alt="Grid Zero" />
-          <span>Grid Zero</span>
+
         </a>
         <ul className="nav-links">
           <li><a href="#benefits">Why Solar?</a></li>
