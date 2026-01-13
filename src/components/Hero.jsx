@@ -32,7 +32,7 @@ const Hero = () => {
                                 autoplay
                                 className="sun-lottie"
                             ></dotlottie-player>
-                            i
+                            ı
                         </span>
                         ng for electricity?
                     </h1>

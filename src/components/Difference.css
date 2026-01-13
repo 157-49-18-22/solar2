@@ -44,7 +44,7 @@
 .section-tag {
     display: inline-block;
     padding: 8px 20px;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: var(--primary);
     color: white;
     border-radius: 50px;
     font-size: 0.9rem;
@@ -118,7 +118,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-green);
+    color: var(--primary);
     font-size: 1.5rem;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -129,7 +129,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: var(--primary);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -164,7 +164,7 @@
 }
 
 .diff-feature-item:hover .diff-text-content h3 {
-    color: var(--primary-green);
+    color: var(--primary);
 }
 
 .diff-text-content p {

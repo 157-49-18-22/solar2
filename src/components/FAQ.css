@@ -52,7 +52,8 @@
 .tab-btn.active {
     color: #000;
     /* Dark text for active */
-    background: #0000ff;
+    background: var(--secondary);
+
     /* Blue background */
     color: #fff;
     border-top-left-radius: 8px;
