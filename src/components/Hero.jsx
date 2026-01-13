@@ -11,7 +11,7 @@ const Hero = () => {
                     muted
                     playsInline
                     className="back-video"
-                    poster="https://images.pexels.com/photos/2800832/pexels-photo-2800832.jpeg?auto=compress&cs=tinysrgb&w=1920"
+
                 >
                     <source src="/bg.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
