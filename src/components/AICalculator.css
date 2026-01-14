@@ -35,7 +35,7 @@
 }
 
 .ai-badge {
-    background: linear-gradient(135deg, #6366f1, #a855f7);
+    background: var(--primary);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 50px;
@@ -45,7 +45,7 @@
     letter-spacing: 1px;
     margin-bottom: 1rem;
     display: inline-block;
-    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+
 }
 
 .calculator-header h2 {
