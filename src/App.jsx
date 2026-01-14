@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import AICalculator from './components/AICalculator';
 import SolarSolutions from './components/SolarSolutions';
 import Features from './components/Features';
 import Difference from './components/Difference';
@@ -14,6 +15,7 @@ function App() {
     <div className="app">
       <Navbar />
       <Hero />
+      <AICalculator />
       <SolarSolutions />
 
       <Features />

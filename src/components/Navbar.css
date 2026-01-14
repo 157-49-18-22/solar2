@@ -1,100 +1,143 @@
-/* Navbar padding reduced to keep it slim */
+/* Floating Glass Navbar Premium Design */
 .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1280px;
     z-index: 1000;
-    padding: 0.8rem 0;
-    transition: all 0.3s ease;
-    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.9) 60%, transparent 100%);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 0.5rem 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    top: 10px;
+    background: rgba(15, 23, 42, 0.85);
+    padding: 0.6rem 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.05);
 }
 
 .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
-    /* Constrain content height */
+    position: relative;
+    /* Ensure content stays relative for the absolute logo to anchor to */
 }
 
-/* Logo container reserves width but no height contribution */
+/* Premium Logo Styling */
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #fff;
-    transition: color 0.3s;
     position: relative;
-    width: 180px;
-    /* Reserve space width */
+    width: 160px;
     height: 0px;
-    /* Don't push navbar height */
+    /* Zero height to allow breakout */
+    z-index: 100;
 }
 
-/* Logo image breaks out of the container */
 .logo img {
-    height: 140px;
+    height: 120px;
+    /* Large breakout logo */
     position: absolute;
     top: 50%;
-    left: 0;
     transform: translateY(-50%);
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
-    /* Added strong shadow for logo visibility */
-    pointer-events: none;
-    /* Just in case */
+    left: -10px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transition: all 0.3s ease;
 }
 
+.navbar.scrolled .logo img {
+    height: 90px;
+    /* Slightly smaller on scroll for balance */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Nav Links Styling */
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     align-items: center;
+    margin: 0 auto;
+    /* Center links in the remaining space */
+    padding-left: 100px;
+    /* Offset for the logo */
 }
 
 .nav-links li {
     list-style: none;
-    /* Ensure no bullets */
 }
 
 .nav-links a {
+    position: relative;
+    font-size: 1rem;
     font-weight: 500;
-    color: #fff;
-    /* White initially */
-    transition: color 0.3s;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    /* Added text shadow for link visibility */
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+    border-radius: 2px;
 }
 
 .nav-links a:hover {
-    color: var(--primary);
-    text-shadow: none;
+    color: #fff;
 }
 
-/* Scrolled State Colors */
-.navbar.scrolled .logo {
-    color: var(--secondary);
+.nav-links a:hover::after {
+    width: 100%;
 }
 
-.navbar.scrolled .logo img {
-    filter: none;
-    /* Remove shadow on scroll */
+/* Button Styling - Ensure it fits the glass theme */
+.navbar .btn {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(255, 184, 0, 0.3);
 }
 
-.navbar.scrolled .nav-links a {
-    color: var(--secondary);
-    text-shadow: none;
-    /* Remove shadow on scroll */
+.navbar.scrolled .btn {
+    padding: 0.7rem 1.5rem;
 }
 
-.navbar.scrolled .nav-links a:hover {
-    color: var(--primary-hover);
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .navbar {
+        width: 95%;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .logo img {
+        height: 100px;
+    }
+
+    .nav-links {
+        display: none;
+        /* Hide links on mobile for now, or use a hamburger */
+    }
+
+    .navbar .btn {
+        margin-left: auto;
+    }
 }
